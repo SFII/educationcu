@@ -1,0 +1,25 @@
+{
+  "name": "educationcu",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wannabeCitizen/educationcu",
+  "authors": [
+    "Peyman Mortazavi <pey.mortazavi@gmail.com>"
+  ],
+  "keywords": [
+    "cu",
+    "education"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5",
+    "jquery": "~2.1.4",
+    "react": "~0.13.3"
+  }
+}
