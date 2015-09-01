@@ -7,4 +7,4 @@ install:
   - npm install -g npm@next
   - ./setup
 
-script: gulp build
+script: gulp test
