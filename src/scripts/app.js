@@ -1,7 +1,7 @@
 
 var React = window.React = require('react'),
     Timer = require("./ui/Timer"),
-    mountNode = document.getElementById("app");
+    mountNode = document.getElementById("main");
 
 var TodoList = React.createClass({
   render: function() {
@@ -41,4 +41,3 @@ var TodoApp = React.createClass({
 
 
 React.render(<TodoApp />, mountNode);
-

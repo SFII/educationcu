@@ -196,7 +196,7 @@ gulp.task('watch', ['html', 'fonts', 'bundle'], function() {
 
 
         // Watch .jade files
-        gulp.watch('src/template/**/*.jade', ['jade', 'html', reload]);
+        gulp.watch('src/**/*.jade', ['jade', 'html', reload]);
 
 
     // Watch image files
@@ -204,7 +204,7 @@ gulp.task('watch', ['html', 'fonts', 'bundle'], function() {
 });
 
 // Build
-gulp.task('build', ['html', 'buildBundle', 'images', 'fonts', 'extras'], function() {
+gulp.task('build', ['html', 'buildBundle', 'images', 'fonts', 'extras', 'jade'], function() {
     gulp.src('dist/scripts/app.js')
         .pipe($.uglify())
         .pipe($.stripDebug())
