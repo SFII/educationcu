@@ -13,10 +13,10 @@ var browserify = require('browserify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream'),
 
-    sourceFile = './src/scripts/app.js',
+    sourceFile = './src/index.js',
 
-    destFolder = './dist/scripts',
-    destFileName = 'app.js';
+    destFolder = './dist/',
+    destFileName = 'index.js';
 
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
@@ -205,10 +205,10 @@ gulp.task('watch', ['html', 'fonts', 'bundle'], function() {
 
 // Build
 gulp.task('build', ['html', 'buildBundle', 'images', 'fonts', 'extras', 'jade'], function() {
-    gulp.src('dist/scripts/app.js')
+    gulp.src('dist/index.js')
         .pipe($.uglify())
         .pipe($.stripDebug())
-        .pipe(gulp.dest('dist/scripts'));
+        .pipe(gulp.dest('dist'));
 });
 
 // Default task
