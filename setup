@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+
+# Script to install all dependencies for project
+
+set -e
+
+sep() {
+  echo
+}
+
+pass() {
+  echo
+  echo "$(tput setaf 2)    PASS: $1 $(tput sgr0)"
+}
+
+fail() {
+  echo
+  echo "$(tput setaf 1)    FAIL: $1 $(tput sgr0)"
+  exit 1
+}
+
+warn() {
+  echo
+  echo "$(tput setaf 3)    WARN: $1 $(tput sgr0)"
+}
+
+echo "Checking for node..."
+if hash node 2>/dev/null; then
+  pass "node.js is installed"
+else
+  fail "no node.js executable found"
+fi
+sep
+
+NODE_VERSION=$(node --version)
+NODE_RECOMMENDED="v0.10.38"
+
+echo "Checking node version..."
+if [ "$NODE_VERSION" == "$NODE_RECOMMENDED" ]; then
+  pass "node.js is the recommended version"
+else
+  warn "node.js version is "$NODE_VERSION", recommended version is "$NODE_RECOMMENDED""
+fi
+sep
+
+echo "Checking for npm..."
+if hash npm 2>/dev/null; then
+  pass "npm is installed"
+else
+  fail "no npm executable found"
+fi
+sep
+
+echo "Updating npm..."
+if npm install -g npm@latest; then
+  pass "npm successfully updated"
+else
+  fail "npm could not be updated"
+fi
+sep
+
+echo "Installing gulp..."
+if npm install -g gulp; then
+  pass "gulp successfully installed"
+else
+  fail "gulp could not be installed"
+fi
+sep
+
+echo "Installing bower..."
+if npm install -g bower; then
+  pass "bower successfully installed"
+else
+  fail "bower could not be installed"
+fi
+sep
+
+echo "Installing babel..."
+if npm install -g babel; then
+  pass "babel successfully installed"
+else
+  fail "babel could not be installed"
+fi
+sep
+
+echo "Installing bower components..."
+if bower install > /dev/null; then
+  pass "bower components successfully installed"
+else
+  fail "bower components could not be installed"
+fi
+sep
+
+echo "Installing npm components..."
+if npm install; then
+  pass "npm packages successfully installed"
+else
+  fail "npm packages could not be installed"
+fi
