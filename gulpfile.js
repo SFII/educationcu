@@ -204,12 +204,20 @@ gulp.task('watch', ['html', 'fonts', 'bundle'], function() {
 });
 
 // Build
-gulp.task('build', ['html', 'buildBundle', 'images', 'fonts', 'extras', 'jade'], function() {
+gulp.task('build', ['eslint', 'html', 'buildBundle', 'images', 'fonts', 'extras', 'jade'], function() {
     gulp.src('dist/index.js')
         .pipe($.uglify())
         .pipe($.stripDebug())
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task("eslint", function () {
+  return gulp.src(["src/**/*.js{,x}", "!src/{bower_components,bower_components/**}"])
+    .pipe($.eslint())
+    .pipe($.eslint.format());
+});
+
+gulp.task("test", ["eslint"]);
+
 // Default task
-gulp.task('default', ['clean', 'build'  , 'jest'  ]);
+gulp.task('default', ['clean', 'build'  , 'test'  ]);
