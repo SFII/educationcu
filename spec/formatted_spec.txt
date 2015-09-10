@@ -1,0 +1,39 @@
+{
+   survey_name:{
+      "yn":{
+         "Would you reccomend the course to a peer?": [bool],
+         "Would you reccomend the professor to a peer?: [bool],
+         "Did you enjoy the course?: [bool],
+         "Was the amount of work fair for the number of credit hours?": [bool],
+         "Do you think you would have had an overall better expierience if the course was taught by someone else: [bool],
+         "Would you take a different course if the same professor taught it?": [bool],
+         "Were you given enough notice of the material on the exam to study well?":[bool],
+         "Did the professor supply enough material for you to study?":[bool],
+         "Was the course well organized":[bool],
+         "Was the professor always prepared for lecture?":[bool],
+         "Did the professor show favoritism":[bool],
+         "Was there a language barrier that affected your learning ability":[bool],
+         "If the course if major required, was the course related to your major":[bool],
+         }
+
+      "Ordinal":{
+         "Was the course too easy, just right, or too challenging":[{ 1:"too easy",
+                                                                      2:"just right",
+                                                                      3:"too challenging"
+                                                                    },]
+         "Did the professor move through the material":             [{ 1:"too slow",
+                                                                      2:"just right",
+                                                                      3:"too fast"
+                                                                    }],
+      }
+      "open_response": {
+         
+         "Was there anything in specific about your professor that hindered your learning ability" :[string],
+         "Was there anything in specific about your professor that hindered your learning ability" :[string],
+         "If you could change one thing about the way your professor taught the course what would it be" :[string],
+         "If you could change one thing about the course what would it be":[string],
+         "Any additional comments about the professor?":[string],
+         "Any additional comments about the course":[string],
+      }     
+   }
+}
