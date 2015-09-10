@@ -1,1 +1,60 @@
-survery spec
+Section one: Binary
+   
+   Would you reccomend the course to a peer?
+ 
+   Would you reccomend the professor to a peer?
+
+   Did you enjoy the course?
+
+   Was the amount of work fair for the number of credit hours?
+
+   Do you think you would have had an overall better expierience if the course was taught by someone else?
+
+   Would you take a different course if the same professor taught it? (And it fit your interests/degree requirements)
+
+   Were you given enough notice of the material on the exam to study well?
+
+   Did the professor supply enough material for you to study?
+
+   Were the exams fair?
+
+   Did your professor require a textbook that was never used?
+
+   Was the course well organized?
+
+   Was the professor always prepared for lecture?
+   
+   Did the professor show favoritism?
+
+   Did the preq's prepare you for this course? 
+
+   Did the professor do a good job keeping your attention in lecture?
+
+   Was there a language barrier that affected your learning ability?
+
+   If the course is major required, was the course related to your major?
+
+
+Section two: Quantified
+
+   Was the course                               1) too easy
+                                                2) just right
+                                                3) too challenging
+
+   Did the professor move through the material  1) too slow
+                                                2) just right
+                                                3) too fast
+
+Section three: Short response
+
+   Was there anything in specific about your professor that hindered your learning ability?
+
+   Was there aynthing in specific about the course that hindered your learning ability?
+
+   If you could change one thing about the way your professor taught the course what would it be?
+
+   If you could change one thing about the course what would it be?
+
+   Any additional comments about the professor?
+
+   Any additional comments about the course?
