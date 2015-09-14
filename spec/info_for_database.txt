@@ -56,7 +56,7 @@ Useful Data About The Course
 
       -Which department it is in
 
-      -ratio of students years in college
+      -ratio of students years in the course 
          a freshman in a high level class is more likely to find it more challenging than a senior in a freshamn level course
 
       -ratio of students ages
