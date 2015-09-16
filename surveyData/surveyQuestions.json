@@ -30,10 +30,10 @@
  {"q7":"Overall challenge of the course",
  "q7a1":"Not very challenging",
  "q7a2":"Somewhat challenging",
- "q6a3":"Very challenging"
+ "q7a3":"Very challenging"
  },
- {"q8":"Did you need to read the book(s) to do well in this course?","q7a1":"True","q7a2":"False"},
- {"q9":"Would you recommend the course to a friend?","q7a1":"True","q7a2":"False"},
+ {"q8":"Did you need to read the book(s) to do well in this course?","q8a1":"True","q8a2":"False"},
+ {"q9":"Would you recommend the course to a friend?","q9a1":"True","q9a2":"False"},
  {"q10":"Grade you think you got by the end of the course?",
  "q10a1":"F-D",
  "q10a2":"D-C",
@@ -53,9 +53,9 @@
  "string":"comments"
  },
  {"q13":"Comments on the course material + overall rating",
- "q12a1":"Bad",
- "q12a2":"Average",
- "q12a3":"Good",
+ "q13a1":"Bad",
+ "q13a2":"Average",
+ "q13a3":"Good",
  "string":"comments"
  }]
 }
