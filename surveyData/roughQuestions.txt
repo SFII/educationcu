@@ -1,0 +1,33 @@
+Items: 
+
+Rated on a scale (not at all -to- above average) with an optional comment box
+Some questions may have more specific answering options
+
+1. Hours per week spent on the course
+
+2. Personal interest in material
+
+3. Instructors effectiveness in encouraging interest
+
+4. On average, how long does it take for an instructor to lose your attention in a single lecture.
+
+
+6. Would you want to work with this instructor?
+
+7. Instructors respect
+
+8. Overall challenge of the course
+
+9. Do you need to read the book to do well in this course?
+
+10. If reading the book is necessary, did you find the lectures to be helpful in anyway?
+
+11. Would you recommend the course to a friend?
+
+12. Grade you think you got by the end of the course
+
+13. Grade you actually got
+
+14. Comments on the instructor + overall rating
+
+15. Comments on the course material + overall rating

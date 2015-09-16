@@ -1,0 +1,64 @@
+{
+   survey_questions:{
+      "ordered":{
+         "How much time did it take to keep up with the course outside of class: 
+								   [{ 1:"A small amount",
+                                                                      2:"A large amount",
+                                                                      3:"Depends on the week"
+                                                                    },],
+         "Personal experience in this field of study:
+								   [{ 1:"No experience",
+                                                                      2:"Some experience",
+                                                                      3:"A lot of experience"
+                                                                    },],
+         "Personal interest in the material before taking the course:
+								   [{ 1:"No interest",
+                                                                      2:"Some interest",
+                                                                      3:"A lot of interest"
+                                                                    },],
+         "How long does it take for an instructor to lose your attention in a single lecture?":
+								   [{ 1:"0-5 minutes",
+                                                                      2:"10-20 minutes",
+                                                                      3:"20-30 minutes"
+								      4:"30+ minutes"
+                                                                    },],
+         "Instructors avaliability":
+								   [{ 1:"No avaliability",
+                                                                      2:"Some avaliability",
+                                                                      3:"A lot of avaliability"
+                                                                    },],
+         "Would you want to work with this instructor in a professional setting?": [bool],
+         "Overall challenge of the course":
+								   [{ 1:"Not very challenging",
+                                                                      2:"Somewhat challenging",
+                                                                      3:"Very challenging"
+                                                                    },],
+         "Did you need to read the book(s) to do well in this course?":[bool],
+         "Would you recommend the course to a friend?":[bool],
+         "Grade you think you got by the end of the course?":
+								   [{ 1:"F-D",
+                                                                      2:"D-C",
+                                                                      3:"C-B"
+								      4:"B-A"
+                                                                    },],
+         "Grade you actually go":
+								   [{ 1:"F-D",
+                                                                      2:"D-C",
+                                                                      3:"C-B"
+								      4:"B-A"
+                                                                    },],
+         "Comments on the instructor + overall rating":
+								   [{ 1:"Bad",
+                                                                      2:"Average",
+                                                                      3:"Good",
+                                                                    },],
+								    [string],
+         "Comments on the course material + overall rating":
+								   [{ 1:"Bad",
+                                                                      2:"Average",
+                                                                      3:"Good",
+                                                                    },],
+								    [string],
+		}
+	}
+}
