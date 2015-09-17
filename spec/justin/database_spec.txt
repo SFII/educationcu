@@ -1,0 +1,55 @@
+"Data":{
+   [{user:
+      user_key:                int,
+      college:                 string,
+      major:                   string,
+      gpa:                     double,
+      rate_major:              int,
+      changed_major:           int, //mmyy, 0 if never
+      gender:                  char,
+      college_years:           double,
+      credits_earned:          int,
+      course_history:          [strings],
+      department_history:      {string:int}, 
+      prof_history:            {string:int},
+      years_outside_cu:        double,
+      years_outside_us:        double,
+      other_universitys:       {string:int},
+      surveys_taken:           [int],
+      contact:                 string  
+   }],
+   {professor:
+      professor_id:            int,
+      gender:                  char,
+      departments:             {string,int},
+      fcq_info:                {fcq_data}               
+   },
+   {course:
+      college:                 string,
+      department:              string,
+      students_college_years:  {double:int},
+      students_ages:           {int:int},
+      pf_rate:                 int,
+      average_gps:             double,
+      credit_hours:            int,
+      time:                    int,
+      professors:              [string],
+      fcq_info:                {fcq_data}
+   },
+   {survey_questions:
+      {  id:int,
+         course:string,
+         instructor:string,
+         questions:{}
+      }
+   }
+
+   responses:{
+      { 
+         user_key:{survery_id:[answers]}
+      }
+   }
+
+   
+
+}

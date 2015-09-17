@@ -1,0 +1,101 @@
+There are only a few things that matter when asking a students opinion about the class. In my opinion the most important role we can take is what we do with this data, rather than collecting as much data as possible. Determining factors that influenced a users opinion are important. If we gather information about the user we can compare the factors across a large number of students. My goal is to present the highest quality of data about a professor, course, and students preformance, to determine the factors that cause sucsess and failure.
+
+
+Useful Data About The Surveyor
+   -Major
+      Compare to the department of the course. Students taking courses in their major are more likely to be interested in the material and have a more positive reflection of the course
+
+   -Gpa
+      Students with low GPA are less likely to enjoy an average class
+
+   -Intrest in Major
+      Students who dislike thier major are more likely to have a negative reflection of a course
+
+   -Number of times changed major
+      Students who change majors are more likely to change again
+
+   -If so date last changed
+      Students who recently changed majors are more likely to be very interested in the major
+
+   -Sex
+      Interested in seeing how students rate a professor of the opposite sex vs a professor of the same sex
+
+   -How many years in college
+      Not freshman/softmore/etc, but number of years.
+
+   -Number of credits earned
+      Compared to number of years in college will show average credits per semester, as well as students who have failed courses. This information can help determine the accuracy of a students rating
+
+   -Previous Courses taken
+      Determining a students course history is valuable in two ways.
+
+   -Ratio of courses taken in a departement
+      Students who take many courses in the same department that are outside of their major are very likely to enjoy the content of that course
+
+   -Repeat professors
+      Students who take the same professor over multiple semesters will supply more accurate information about said professor
+
+   -How many years of college outside of CU
+      Students who have expierience at a different college's opinions are extermly valuable to compare the standards of our professors to that of a different university
+
+   -If so outside of US/
+      More global comparison
+
+   -If outside of CU what university
+      Possibly compare reviews of students who both attented the same Non-cu university, as well as quantify how many different universitys we have compared
+
+   -SCQ user score
+      A student who fills many surveys is interested in providing feedback, therefore more likely to provide accurate information
+
+   -Number of other students referred to our website
+      If a student tells his friends to join our surverys, that means they are really really invested in making changes, therefore their information is likely to be value 
+
+Useful Data About The Course
+   
+      -Which college it is in
+
+      -Which department it is in
+
+      -ratio of students years in the course 
+         a freshman in a high level class is more likely to find it more challenging than a senior in a freshamn level course
+
+      -ratio of students ages
+         student maturity
+
+      -previous failed student ratios
+         determine the quantitative difficulty of a course
+   
+      -average gpa
+         determine the quantitiative difficulty of a course
+
+      -# of credit hours
+         compare to the amount of work a student says he/she put into the course
+
+      -time of day
+         morning and evening classes will have lower attendance rates as well as average focus times of a student
+
+      -# of profs who teach the course
+         comparison of different professors who teach the same course during the same profesor makes        determine the quantitiative difficulty of a course
+
+      -FCQ info
+
+      -Any other 3rd party info we can scrape. (collegeslate/ratemyprofessor etc)
+
+Useful Data About The Professor
+
+      -sex
+         compare ratings from students to professors of the opposite sex
+
+      -college
+
+      -department(s)
+         if a professor teaches similar courses in different departments we can see how the different ratings compare
+
+      -attendance rate
+         how often were there guest lecturers
+
+      -fcq info
+      
+      -Any other 3rd party info we can scrape. (collegeslate/ratemyprofessor etc)
+
+   

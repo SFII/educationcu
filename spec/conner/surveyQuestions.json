@@ -1,0 +1,61 @@
+{
+ "survey_questions":[
+ {"q1":"How much time did it take to keep up with the course outside of class", 
+ "q1a1":"A small amount",
+ "q1a2":"A large amount",
+ "q1a3":"Depends on the week"
+ },
+ {"q2":"Personal experience in this field of study",
+ "q2a1":"No experience",
+ "q2a2":"Some experience",
+ "q2a3":"A lot of experience"
+ },
+ {"q3":"Personal interest in the material before taking the course",
+ "q3a1":"No interest",
+ "q3a2":"Some interest",
+ "q3a3":"A lot of interest"
+ },
+ {"q4":"How long does it take for an instructor to lose your attention in a single lecture?",
+ "q4a1":"0-5 minutes",
+ "q4a2":"10-20 minutes",
+ "q4a3":"20-30 minutes",
+ "q4a4":"30+ minutes"
+ },
+ {"q5":"Instructors avaliability",
+ "q5a1":"No avaliability",
+ "q5a2":"Some avaliability",
+ "q5a3":"A lot of avaliability"
+ },
+ {"q6":"Would you want to work with this instructor in a professional setting?","q6a1":"True", "q6a2":"False"},
+ {"q7":"Overall challenge of the course",
+ "q7a1":"Not very challenging",
+ "q7a2":"Somewhat challenging",
+ "q7a3":"Very challenging"
+ },
+ {"q8":"Did you need to read the book(s) to do well in this course?","q8a1":"True","q8a2":"False"},
+ {"q9":"Would you recommend the course to a friend?","q9a1":"True","q9a2":"False"},
+ {"q10":"Grade you think you got by the end of the course?",
+ "q10a1":"F-D",
+ "q10a2":"D-C",
+ "q10a3":"C-B",
+ "q10a4":"B-A"
+ },
+ {"q11":"Grade you actually go",
+ "q11a1":"F-D",
+ "q11a2":"D-C",
+ "q11a3":"C-B",
+ "q11a4":"B-A"
+ },
+ {"q12":"Comments on the instructor + overall rating",
+ "q12a1":"Bad",
+ "q12a2":"Average",
+ "q12a3":"Good",
+ "string":"comments"
+ },
+ {"q13":"Comments on the course material + overall rating",
+ "q13a1":"Bad",
+ "q13a2":"Average",
+ "q13a3":"Good",
+ "string":"comments"
+ }]
+}
