@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>rethink testing</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+   </head>
+<body>
+   <h1>Survey</h1>
+      <p>"What is your gender?"</p>
+      <input type="radio" name="sex" value="male">Male
+      <br>
+      <input type="radio" name="sex" value="female">Female
+      <br>
+      <input type="radio" name="sex" value="dnr">Perfer not to respond
+      <p>"What is your current status?"</p>
+      <input type="radio" name="educ_status" value="Freshman">Freshman
+      <br>
+      <input type="radio" name="educ_status" value="Sophmore">Sophmore
+      <br>
+      <input type="radio" name="educ_status" value="Junior">Junior
+      <br>
+      <input type="radio" name="educ_status" value="Senior">Senior
+      <br>
+      <button onclick="submitForm()">Submit</button>
+<script>
+   var connection = null;
+   r.connect( {host: 'localhost', port: 28015}, function(err, conn) {
+          if (err) throw err;
+              connection = conn;
+   })
+   r.db('form').tableCreate('form1').run(connection, function(err, result) {
+       if (err) throw err;
+           console.log(JSON.stringify(result, null, 2));
+   })
+   form_data = {};
+   function submitForm(){
+      form_data.sex=$( "input:radio[name=sex]:checked" ).val();
+      form_data.educ_status=$( "input:radio[name=educ_status]:checked" ).val();
+      console.log(form_data);
+      r.table("form1").insert([form_data]).run(connection, function(err, result) {
+             if (err) throw err;
+                 console.log(JSON.stringify(result, null, 2));
+      })
+   }
+
+</script>
+</body>
+
