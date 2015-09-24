@@ -2,41 +2,41 @@ var React = window.React = require('react'),
     Timer = require("./timer/Timer"),
     mountNode = document.getElementById("main");
 
-var TodoList = React.createClass({
-  render: function() {
-    var createItem = function(itemText) {
-      return <li>{itemText}</li>;
-    };
-    return <ul>{this.props.items.map(createItem)}</ul>;
-  }
-});
-var TodoApp = React.createClass({
-  getInitialState: function() {
-    return {items: [], text: ''};
-  },
-  onChange: function(e) {
-    this.setState({text: e.target.value});
-  },
-  handleSubmit: function(e) {
-    e.preventDefault();
-    var nextItems = this.state.items.concat([this.state.text]);
-    var nextText = '';
-    this.setState({items: nextItems, text: nextText});
-  },
-  render: function() {
-    return (
-      <div>
-        <h3>TODO</h3>
-        <TodoList items={this.state.items} />
-        <form onSubmit={this.handleSubmit}>
-          <input onChange={this.onChange} value={this.state.text} />
-          <button>{'Add #' + (this.state.items.length + 1)}</button>
-        </form>
-        <Timer />
-      </div>
-    );
-  }
-});
+var Survey = React.createClass({
+   getInitialState: function(){
+      return {myQuestions:[]};
+   },
+   componentDidMount: function(){
+      console.log("hello");
+      var questions=[{question:"What is your gender"},
+      {options:["Male","Female"]}]
+      console.log(questions)
+      this.setState({myQuestions: questions }, function() {});
+   },
+   render: function(){
+      var myQuestions = this.state.myQuestions.map(function(item){
+         console.log(item.question);
+         return (<QuestionComponent question1={item.question}/>);
+      })
+      return  (
+            <div>
+               <p>
+                  {myQuestions}
+               </p>
+            </div>
+            )
+
+       }
+   })
+
+var QuestionComponent = React.createClass({
+   render: function(){
+      return (
+            <div>
+               <p>{this.props.question1}</p>
+            </div>
+   )}
+})
 
 
-React.render(<TodoApp />, mountNode);
+React.render(<Survey />, mountNode);
