@@ -4,10 +4,17 @@ var mountNode = document.getElementById("main");
 var SubComp = React.createClass({
   render: function () {
     return (
-        <p>{this.props.question}</p>
-        {this.props.responses.map(function(response) {
-           return <input type="radio" name="sex">{response}</input>;
-         })}
+            <div>
+              <br></br>
+              <p>{this.props.question}</p>
+              {this.props.responses.map(function(response) {
+                 return (<div>
+                            <input type="radio" name="sex">{response}</input>
+                            <br></br>
+                        </div>
+                        );
+               })}
+            </div>
         )
 
      }
@@ -20,8 +27,10 @@ var MyComp = React.createClass({
   componentDidMount: function() {
     $.get("https://api.spotify.com/v1/albums?ids=382ObEPsp2rxGrnsizN5TX,1A2GTWGtFfWp7KSQTwWOyo,2noRn2Aes5aoNVsU6iWThc&market=ES", function(result) {
 	    result = {"survey":[
-			{"question":"What is your sex?", "responses":["M","F"]},
-			{"question":"What is your current status?", "responses":["Freshaman","Sophmore","Junior","Senior"]},
+			{"question":"What is your sex?", "responses":["M","F"],"id":1},
+			{"question":"What is your current status?", "responses":["Freshaman","Sophmore","Junior","Senior"],"id":1},
+         {"question":"Would you reccommend the course to a friend", "responses":["Yes","No"],"id":1},
+         {"question":"Would you reccommend the professor to a friend", "responses":["Yes","No"],"id":1}
 			]};
       this.setState({data: result.survey}, null );
     }.bind(this));
@@ -32,7 +41,7 @@ var MyComp = React.createClass({
 
     var myDataShit = this.state.data.map(function(item){
        console.log(item);
-      return (<SubComp key={item.id} question={item.question} responses={item.responses}/>);
+      return (<SubComp id={item.id} question={item.question} responses={item.responses}/>);
     })
 
 
