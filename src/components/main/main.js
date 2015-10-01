@@ -48,15 +48,22 @@ var MyComp = React.createClass({
   componentDidMount: function() {
     // logic, go pull data from database.
     //$.get("http://myapi.com/")
-    console.log("i'm here");
-    var x = [{name: "Peyman", age: "99"},
-                {name: "Slaten", age: "69"}]
-    this.setState({data: x}, function() {});
+
+    // var x = [{name: "Peyman", age: "99"},
+    //             {name: "Slaten", age: "69"}]
+
+    //var x = $.get()
+    $.get("https://api.spotify.com/v1/albums?ids=382ObEPsp2rxGrnsizN5TX,1A2GTWGtFfWp7KSQTwWOyo,2noRn2Aes5aoNVsU6iWThc&market=ES", function(result) {
+      console.log(result);
+      this.setState({data: result.albums}, function() {});
+    }.bind(this));
+
+
   },
   render: function () {
 
     var myDataShit = this.state.data.map(function(item){
-      return (<SubComp prop1={item.name} prop2={item.age} />);
+      return (<SubComp prop1={item.name} prop2={item.popularity} />);
     })
 
     console.log(myDataShit);
