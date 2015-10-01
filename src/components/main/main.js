@@ -62,17 +62,15 @@ var MyComp = React.createClass({
   },
   render: function () {
 
-    var myDataShit = this.state.data.map(function(item){
+    var myData = this.state.data.map(function(item){
       return (<SubComp prop1={item.name} prop2={item.popularity} />);
     })
-
-    console.log(myDataShit);
 
     return (
       <div>
         Yo, my data:
         <p id='hello'>
-          {myDataShit}
+          {myData}
         </p>
       </div>
     )
