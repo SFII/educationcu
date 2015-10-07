@@ -1,5 +1,5 @@
 "Data":{
-   [{user:
+   [{user:{
       user_key:                int,
       college:                 string,
       major:                   string,
@@ -18,13 +18,13 @@
       surveys_taken:           [int],
       contact:                 string  
    }],
-   {professor:
+   {professor:[
       professor_id:            int,
       gender:                  char,
       departments:             {string,int},
       fcq_info:                {fcq_data}               
-   },
-   {course:
+   },]
+   {course:[
       college:                 string,
       department:              string,
       students_college_years:  {double:int},
@@ -35,21 +35,26 @@
       time:                    int,
       professors:              [string],
       fcq_info:                {fcq_data}
-   },
-   {survey_questions:
-      {  id:int,
-         course:string,
-         instructor:string,
-         questions:{}
-      }
-   }
+   },]
 
-   responses:{
+   {Questions:{
+      id:                      int,
+      text:                    string,
+      response_format:         [],
+      }
+   },        
+
+   {surveys:[
+      {  id:                   int,
+         course:               string,
+         instructor:           string,
+         questions:            [int],
+      }
+   }],
+
+   survery_responses:{
       { 
-         user_key:{survery_id:[answers]}
+         user_key:{survey_id:{question_id:answer}}
       }
-   }
-
-   
-
+   },
 }
