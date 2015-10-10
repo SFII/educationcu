@@ -1,42 +1,91 @@
-var React = window.React = require('react'),
-    Timer = require("./timer/Timer"),
-    mountNode = document.getElementById("main");
+var React = window.React = require('react');
+var mountNode = document.getElementById("main");
 
-var TodoList = React.createClass({
-  render: function() {
-    var createItem = function(itemText) {
-      return <li>{itemText}</li>;
-    };
-    return <ul>{this.props.items.map(createItem)}</ul>;
-  }
-});
-var TodoApp = React.createClass({
-  getInitialState: function() {
-    return {items: [], text: ''};
-  },
-  onChange: function(e) {
-    this.setState({text: e.target.value});
-  },
-  handleSubmit: function(e) {
-    e.preventDefault();
-    var nextItems = this.state.items.concat([this.state.text]);
-    var nextText = '';
-    this.setState({items: nextItems, text: nextText});
-  },
-  render: function() {
-    return (
-      <div>
-        <h3>TODO</h3>
-        <TodoList items={this.state.items} />
-        <form onSubmit={this.handleSubmit}>
-          <input onChange={this.onChange} value={this.state.text} />
-          <button>{'Add #' + (this.state.items.length + 1)}</button>
-        </form>
-        <Timer />
-      </div>
-    );
-  }
-});
+var SubComp = React.createClass({
+    render: function() {
+        var radioButtons = this.props.responses.map(function(response) {
+            return (
+                <input class="response" type = "radio"
+                name = { this.props.name }> {response} </input>);
+            }.bind(this));
+
+        return (
+            <div>
+                <br></br>
+                <p> {this.props.question} </p>
+                {radioButtons}
+            </div>
+        );
+    }
+})
+
+var MyComp = React.createClass({
+            getInitialState: function() {
+                return {
+                    data: []
+                };
+            },
+
+            componentDidMount: function() {
+                $.get("https://api.spotify.com/v1/albums?ids=382ObEPsp2rxGrnsizN5TX,1A2GTWGtFfWp7KSQTwWOyo,2noRn2Aes5aoNVsU6iWThc&market=ES",                               function(result) {
+                    result = {
+                        "survey": [{
+                            "question": "What is your sex?",
+                            "responses": ["M", "F"],
+                            "name": "one"
+                        }, {
+                            "question": "What is your current status?",
+                            "responses": ["Freshaman", "Sophmore", "Junior", "Senior"],
+                            "name": "two"
+                        }, {
+                            "question": "Would you reccommend the course to a friend",
+                            "responses": ["Yes", "No"],
+                            "name": "three"
+                        }, {
+                            "question": "Would you reccommend the professor to a friend",
+                            "responses": ["Yes", "No"],
+                            "name": "four"
+                        }, {
+                           "question": "Did you enjoy this course?",
+                           "responses": ["Yes", "No"],
+                           "name": "five"
+                        }]
+                    };
+                    this.setState({
+                        data: result.survey
+                    }, null);
+                }.bind(this));
 
 
-React.render(<TodoApp />, mountNode);
+            },
+            render: function() {
+
+                var myData = this.state.data.map(function(item) {
+                        return ( <SubComp
+
+                            name = {
+                                item.name
+                            }
+                            question = {
+                                item.question
+                            }
+                            responses = {
+                                item.responses
+                            }
+                            />);
+                        })
+
+
+                    return (
+                        <div>
+                        <form>
+                        {myData}
+                        </form>
+                        </div>
+                    )
+                }
+            })
+
+
+
+React.render( <MyComp/> , mountNode);
