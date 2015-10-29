@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Your deck.js Presentation</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h2>What is SFII?</h2>
+      <ul>
+        <li>SFII: Students for Instructional Improvemnt</li>
+        <li>SCQ: Students Course Questionaire</li>
+        <li>Previous projects from the team like CUFCQ and RateMyBuffs</li>
+        <li>Goals of the student group</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>What is the SCQ project?</h2>
+      <li>The SCQ project is an attempt to improve the current system of collecting and visualizing anonymous student survey data. We want to take seemingly dry and boring evaluation stats maintained and collected by universities, and present that data in a meaningful and attractive way. Collected data is made instantly accessible. Tools to visualize and study the data are available to everyone. We believe with this approach, clear actionable information can be made readily available to students, instructors and administrators.</li>
+      <li>More?</li>
+    </section>
+
+    <section class="slide">
+      <h2>What problem are we fixing?</h2>
+      <li>Picture of current FCQ web application</li>
+      <li>Example of how useless this data: Number Scale, Audience, Questions asked, visualization ect..</li>
+      <li>Evolution of SFII projects + images, FCQ -> CUFCQ -> SCQ</li>
+    </section>
+
+    <section class="slide">
+      <h2>How are we going to fix it?</h2>
+      <li>Picture of material-ui user dashboard</li>
+      <li>Examples of how our data will be more precise and meaningful</li>
+      <li>Examples of how the visualization of our data will be impactful, so much so that the motivation for taking a survey will be so that the student can see the results of the data</li>
+      <li>Examples of how this can impact the effectiveness of college courses by showing what works and what doesn't to induce learning in a lecture ect...</li>
+      <li>Examples of how we can save universities time, money, and headaches</li>
+      <li>New features and benfits of using our new system: voting on questions, professor made surveys, more frequent surveys ect...</li>
+    </section>
+
+    <section class="slide">
+      <h2>Compare our data to current FCQ data</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Goals for after we finish the project and fix the problem</h2>
+      <li>Continuation of the student group</li>
+      <li>Scaling to other Universities</li>
+      <li>Research the results of our new, never before seen data metrics on college classes</li>
+    </section>
+
+    <section class="slide">
+      <h2>Future of SCQ and SFII</h2>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
